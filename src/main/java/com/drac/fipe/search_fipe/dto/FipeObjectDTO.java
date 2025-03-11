@@ -6,6 +6,10 @@
  */
 package com.drac.fipe.search_fipe.dto;
 
-public record FipeObjectDTO(String codigo, String nome) {
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record FipeObjectDTO(@JsonAlias("codigo") String codigo, @JsonAlias("nome") String nome) {
 
 }
