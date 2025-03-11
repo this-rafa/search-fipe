@@ -13,12 +13,12 @@ public class Menu {
     }
 
     public String selecionarTipoVeiculo() {
-        System.out.println("Selecione o modelo de veiculo:");
+        System.out.println("Selecione uma marca de veiculo:");
         return scanner.nextLine();
     }
 
     public String selecionarMarcaVeiculo() {
-        System.out.println("Selecione uma marca de veiculo:");
+        System.out.println("Selecione uma modelo de veiculo:");
         return scanner.nextLine();
     }
 
