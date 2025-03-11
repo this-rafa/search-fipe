@@ -16,4 +16,19 @@ public class FipeServiceCallout {
             String.format("%s/modelos", codigoMarca));
     }
 
+    public String getAnos(String tipoVeiculo, String codigoMarca, String codigoModelo){
+        return service.getCallApi(URL_CORE + 
+            String.format("%s/marcas", tipoVeiculo) + "/" +
+            String.format("%s/modelos", codigoMarca) + 
+            String.format("/%s/anos", codigoModelo));
+    }
+
+    public String getVeiculo(String tipoVeiculo, String codigoMarca, String codigoModelo, String codigoAno){
+        return service.getCallApi(URL_CORE + 
+            String.format("%s/marcas", tipoVeiculo) + "/" +
+            String.format("%s/modelos", codigoMarca) + 
+            String.format("/%s/anos", codigoModelo) + "/" + codigoAno);
+    }
+    
+
 }
